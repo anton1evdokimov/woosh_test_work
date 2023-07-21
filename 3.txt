@@ -1,0 +1,22 @@
+Есть структура данных:
+
+typedef enum
+{
+	EVENT_LVL_TRACE = 	0x01,
+	EVENT_LVL_DEBUG =	0x02,
+	EVENT_LVL_INFO =	0x04,
+	EVENT_LVL_WARNING =	0x08,
+	EVENT_LVL_ERROR =	0x10,
+	EVENT_LVL_CRITIC =	0x20,
+} EVENT_LVL_t;
+
+typedef struct
+{
+	EVENT_LVL_t Lvl;
+  char Comment;
+	char* Src;
+	double Value;
+	int Cnt;
+} Event_t;
+
+Размер структуры типа Event_t будет занимать 32 байта
